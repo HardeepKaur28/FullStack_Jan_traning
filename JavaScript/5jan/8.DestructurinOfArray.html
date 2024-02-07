@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeSt. Arrayt</title>
+</head>
+<body>
+    <script>
+        //Destucturing of an Array : concept of E56
+        //[] : its stores array index and array values.
+
+        const value = ['item1','item2','item3'];
+        let value1 = value[0];
+        let value2 = value[1];
+
+        console.log(value1);
+        console.log(value2);
+
+        let [value3,value4,value5,value6] = value;
+        console.log(value3);
+        console.log(value4);
+        console.log(value5);
+        console.log(value6);
+
+        const fruits = ['mango','apple','kiwi',1,2,3,45.6,'hk'];
+        let [str1,,str2, ...num] = fruits;
+        
+        console.log(str1);
+        console.log(str2);
+        console.log(num); //return array of elements 
+    </script>
+</body>
+</html>

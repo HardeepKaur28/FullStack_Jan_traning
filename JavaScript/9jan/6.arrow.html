@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Arrow function : 
+        //this keyword is not use in arrow function,
+        const obj1 = {
+            fName : 'Hardeep',
+            age : 19,
+        
+            // about : function () { //this is called method
+            //     console.log(`${this.fName} , ${this.age}`);
+            // }
+            about :  () => { //this is called method
+                console.log(this);//parent is windeow here. but normal function parent is abovr fun.
+                console.log(`${this.fName} , ${this.age}`);
+            }
+        }
+        obj1.about();
+        
+    </script>
+</body>
+</html>

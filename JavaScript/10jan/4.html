@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class in js : data memeber and data method
+        //Class name with capital lettr but function name with small letter.
+        class Animal {
+            constructor (name , age){//local agrument is here only 
+                //but the below on method does'not argument so we use this.
+                this.name = name;//these are accessble foe below onces.
+                this.age = age;
+            }
+            // Animal (name , age){ .. return undefined
+            //     this.name = name;
+            //     this.age = age;
+            // }
+            about(){
+                return `Name is ${this.name}`;
+            }
+            isFast(){
+                return this.age >=2;
+            }
+            isCute(){
+                return true;
+            }
+
+        }
+        
+        const obj1 = new Animal('Shafi',3);
+        console.log(obj1);
+        console.log(Animal);//retun all inside a class Amimal
+        console.log(typeof Animal);
+        //The reason typeof Animal returns "function" is that classes in JavaScript
+        // are essentially special types of constructor functions. 
+        //They define a blueprint for creating objects, 
+        //and you can instantiate them using the new keyword.
+
+        //while typeof is often used to determine the basic data type of a variable or expression, 
+        //when applied to a class in JavaScript, it reports "function" because classes are internally represented as functions.
+        // This behavior aligns with how classes are implemented in the language,
+        // where a class name refers to a function that can be used to create instances of that class.
+
+        console.log(obj1.about());
+        console.log(obj1.isFast());
+        console.log(obj1.isCute());
+        console.log(obj1.name);
+
+        // class Dog {
+        //     constructor (name , age){
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        //     Animal (name , age){
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        //     about(){
+        //         return `Name is ${this.name}`;
+        //     }
+        //     isFast(){
+        //         return this.age >=2;
+        //     }
+        //     isCute(){
+        //         return true;
+        //     }
+
+        // }/
+        // class Dog extends Animal{//inheritance concept in js
+
+        // }
+        // const d1 = new Animal('Tommy',2);
+        // console.log(d1.about());
+        // console.log(d1);
+
+        // console.log(Dog);
+        // console.log(typeof Dog);//function
+        //difference between instance and 
+        //instance :single -single  properities  ko inhert krta ha.
+       // inhert : whole properities ko ek sath hi copy krta ha.
+
+       class Dog extends Animal{
+        constructor(name,age,speed){
+            //supper keyword is used to access the properities / data memeber of parent class.
+            super(name,age);
+            this.speed = speed;
+        }
+        dogSpeed(){
+            return `Name : ${this.name} , and speed :  ${this.speed}`;
+        }
+        }
+
+        const d1 = new Dog("Nick",2,34);
+        console.log(d1.dogSpeed());
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects in array</title>
+</head>
+<body>
+    <script>//use case ``,'' ," " : difference .
+
+        //objects in array :
+        //array is not sufficient for real world data.
+        //syntax = (key value pair)
+        //there is no indexing in object
+
+        let obj = {};
+        let arr = [];
+
+        console.log(typeof obj); //object
+        console.log(typeof arr); //object
+
+        //to diff. b/w obj and array : Array.isArray()
+        console.log(Array.isArray(obj));
+        console.log(Array.isArray(arr));
+
+        //how to create a object : 
+
+        const person = {
+          // key : value  
+            fname : "Hardeep",
+            "age" : 19 ,
+            country : "India",
+           "x hobbies" : ["music","sleep","Painting","Playing"], //for space " " between strings
+            schools : ["GES","GMSS","MSP","RBU"]
+        }
+
+        //to add value to object : 
+        person.lname = 'Kaur';
+        console.log(person);
+        
+        // Dot notation : . : single value
+        console.log(person.age);
+
+        //bracket notation : [] : To access two or more value
+        console.log(person["x hobbies"]);
+
+    </script>
+</body>
+</html>

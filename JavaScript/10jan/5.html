@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //method overidding : 
+        class Parent {
+            fun(){
+                console.log('hello');
+            }
+        }
+        class Child extends Parent{
+            fun(){
+                console.log('okk');
+            }
+        }
+       const obj1 = new Child();//self function run first.
+       console.log(obj1);
+       obj1.fun()
+
+       const obj2 = new Parent();
+       obj2.fun();
+
+    </script>
+</body>
+</html>

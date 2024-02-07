@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+<body>
+    <script>
+
+        // function sum(a,b){
+        //     return a+b;
+        // }
+
+        // const result = sum(4,6);
+        // console.log(result);
+
+        //default parameters :
+        // function sum(a,b,c=10){
+        //     return a+b+c;
+        // }
+        // const result = sum(4,6);
+        //  console.log(result);
+        //  console.log(sum(3));//not given b value
+
+        //rest Parameters : 
+        // function sum(a,b,...numbers){
+        //    console.log(a,b,numbers ,"meassage");
+        // }
+        
+        //  console.log(sum(2,4,5,7,3));
+        //  console.log(..."meassage");
+
+        // function computation(a,b,...numbers){
+        //     function area()
+        //     {
+        //        return a*b
+        //     }
+        //     return area
+        // }
+        // console.log(computation());
+
+        // function computation(){//function insed a function
+        //     function area(a,b)
+        //     {
+        //        return a*b
+        //     }
+        //     return area
+        // }
+        // console.log(computation()(2,4));
+
+        //hosting function:
+        // console.log(computation());
+        // function computation(){//function insed a function
+        //     function area(a,b)
+        //     {
+        //        return a*b;
+        //     }
+        //     return area;
+        // }
+        
+        
+        // function computation(){//function insed a function
+        //    let x =4;
+        //    let y =5;
+        //     function area()
+        //     {
+        //        return x+y;
+        //     }
+        //     return area;
+        // }
+        //closure : imp : areafunction hold the value of computaiuon function when computation function is dead .
+        //child fun. is closure to parent function , means area is closure function to computation.
+        // const areaFunctin = computation();
+        // const result = areaFunctin()
+        // console.log(result);
+        // console.log(
+        //     `the value of z is ${result}`
+        // );
+
+        //2.way to write the above. the closure.
+        // console.log(computation()());
+
+
+        //variables and methods is access by closure area function to parent computation function.
+        function computation(x){//function insed a function
+            function sum(y)
+            {
+               return x+y;
+            }
+            return sum;
+        }
+        const sumFunctin = computation(10);
+        const result = sumFunctin(15)
+        console.log(result);
+        
+    </script>
+</body>
+</html>
+
+
+<!-- //temporal deadzone -->

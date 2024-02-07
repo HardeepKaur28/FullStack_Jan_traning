@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selector</title>
+    <style>
+        div h1{
+            color: rgb(20, 20, 145);
+            background-color: rgb(226, 95, 95);
+        } 
+        div>h2{
+            background-color: pink;
+        }
+        div>h1{
+            background-color: aqua;
+        }
+        /* #one{
+           background-image: linear-gradient(pink,blue);
+            height: 25vh;
+            width: 25vh;
+        }
+        #two{
+            background-image: radial-gradient(blue,pink);
+            height: 25vh;
+            width: 25vh;
+        }
+         */
+
+         h1+h2+h2{
+            background-color: palegreen;
+         }
+         h1~h2{
+            background-color: rgb(203, 154, 154);
+         }
+         h2~h3~h3{
+            background-color: blue;
+         }
+    </style>
+</head>
+<body>
+    <!-- Combinator selector : decendent 
+                                child selector
+                                 adjusent s s +
+                                 general seector ~
+    -->
+    <div>
+
+        <h1>Rubi</h1>
+        <h1>Pardeep</h1>
+        <h1>Hardeep</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, odio quo. Fugiat non itaque sapiente, quaerat corporis sit rem velit at nulla quis?</p>
+        <div>
+            <h2>Jashan</h2>
+        </div>
+        <div>
+            <section>
+                <h1>Happy</h1>
+            </section>
+        </div>
+    </div>
+    <!-- <div id="one"></div>
+    <div id="two"></div> -->
+
+    <!-- 3. -->
+        <h1>
+            <h2>One</h2>
+            <h2>Two</h2>
+        </h1>
+        <h1>
+            <h2>Three</h2>
+            <h2>Four</h2>
+            <h2>Five</h2>
+        </h1>
+        <h2>
+            <h3>HKM</h3>
+            <h3>PKS</h3>
+        </h2>
+</body>
+</html>

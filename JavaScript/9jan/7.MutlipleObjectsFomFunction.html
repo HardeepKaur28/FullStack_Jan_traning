@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //create obj :
+        //fun. ki help se object is created. 
+        const userMethod = {
+            about : function () {
+                return `my name is ${this.fName} and is ${this.age}`;
+            },
+            is18 : function (){
+                return this.age >=18 ;
+            } 
+        }
+        function createUser(fName,lName,email,age,address){//method is not placed as parameter in function
+            // this.fName = fName;//referemce gives to obj.
+            const user = {};
+            user.fName = fName;
+            user.lName = lName;
+            user.email =email;
+            user.age = age;
+            user.address = address;
+            //the below meyhods takes memory  every time we created  a seareate referencwe function 
+            // user.about = function () {
+            //     return `my name is ${this.fName} and is ${this.age} `;
+            // },
+            // user.is18 = function (){
+            //     return this.age >=18 ;
+            // }
+            user.about = userMethod.about;//refernce
+            user.is18 = userMethod.about;
+            return user;
+        }
+        
+        //now lets send data to functin and get our object 
+        const obj1 = createUser("Samar","Sharma","SS@gmail.com",23,"Mohali");
+        console.log(obj1);
+
+        const myData= obj1.about();
+        console.log(myData);
+        console.log(obj1.is18());
+
+        //mutiple object using function : 
+        const obj2 = createUser("Rubi","Ray","RR@gmail.com",19,"Patiala");
+        console.log(obj2);
+        const obj3 = createUser("Jotveer","Singh","JS@gmail.com",34,"Sangrur");
+        console.log(obj3);
+        const obj4 = createUser("Preet","Shamra","PS@gmail.com",21,"Goa");
+        console.log(obj4);
+
+        //---------->no need we create function above---------------->
+        // createUser();
+        // const user1 = {
+        //     fName : "Hardeep",
+        //     lName : "Kaur",
+        //     email :"hk@gmail.com",
+        //     age :19,
+        //     address : "mohali",
+        //     // about : function () {
+        //     //     return `my name is ${this.fName} and is ${this.age} `;
+        //     // },
+        //     // is18 : function (){
+        //     //     return this.age >=18 ;
+        //     // }
+        // }
+        // const aboutMe = user1.about();
+        // console.log(aboutMe);
+        //------------------------------------------------------------->
+
+        //for multiple object : we need a  function : 
+        //fun. is required to create multiple objects :
+        //1 .function - create object. 
+        //2. add key-value pair.
+        //3.function with the return the object. 
+        //4. catch object in variable and print. 
+    </script>
+</body>
+</html>

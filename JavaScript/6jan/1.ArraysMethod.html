@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Method</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3,4];
+        arr[0] = 5; //only value can change not address
+        console.log(arr);
+
+        //map : loop which iterate element and print them.
+        arr.map((item) => console.log(item))
+
+        arr.map((item,index) => console.log(index)) 
+
+       const a1 =  arr.map((item) => {return item}) ; //return use with {}
+       console.log(a1);
+
+       const a2 =  arr.map((item) =>  item) ; //no return use then no {} use
+       console.log(a2);
+
+       const a3 =  arr.map((item) => item >2 ) ; //return with {}
+       console.log(a3);
+
+       const a4 =  arr.filter((item) => item >2) ; //return with {}
+       console.log(a4); //map and filter diff  : map : no condition ,filter : having condition
+
+        //map : return index
+       //push : return length ,unshift
+       //pop : updated length ,shift
+        
+
+       //splice : return sub array
+       const a5 = [1,2,3,4,5,6];
+       console.log(a5);
+        //    const returnElement = a5.splice(2);
+        //    console.log(returnElement);
+
+        //    a5[8] = 0;
+        //    console.log(a5);//7 :index , 8 : 0
+        //    a5  = [] //gives error
+
+        //    a5.splice(2,0,5); //index ,delete/add ,element
+        //    console.log(a5);
+
+        //    a5.splice(2,2);//remove 3 element
+        //    console.log(a5);
+       //slice:  splice:
+
+       const a6 = [1,2,3,4,5,6]
+
+       const sliceMethod = a6.slice(2,3);
+       console.log(sliceMethod);
+      const spliceMEthod =  a6.splice(2,0,99,23);
+      console.log(a6,spliceMEthod);
+    
+      console.log(a6);
+      
+      //find : first occurenecr return : iterate and match condtion then retun element
+      const foundElement = a6.find((item) => item>5);
+      console.log(foundElement);
+
+      //findIndex : return index when condtion becomes true.
+      //findLastIndex
+      const foundElementIndex = a6.findIndex((item) => item>5);
+        console.log(foundElementIndex);
+
+        //join
+        console.log(a6);
+        // const joinedString = a6.join(",");
+        const joinedString = a6.join(".");
+        console.log(joinedString);//return string
+        console.log(typeof a6);
+
+        //qus. 
+        let string = 'Hello World';
+        console.log(string);
+        let stringsplit = string.split("");
+        console.log(stringsplit);
+        
+        const reverseString = stringsplit.reverse();
+        console.log(reverseString);
+
+        const joinString = reverseString.join("");
+        console.log(joinString);
+
+        let r1 = joinString.split(" ");
+        console.log(r1);
+        
+        const reverse1 = r1.reverse();
+        console.log(reverse1);
+
+        const js1 = reverse1.join(" ");
+        console.log(js1);
+    
+    </script>
+</body>
+</html>

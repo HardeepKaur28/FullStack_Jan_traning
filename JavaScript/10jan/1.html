@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("HELLO");
+        // //FUNCTION in js = function + object 
+        // function hello() {
+        //     console.log('hello world');
+        // }  
+        // hello();
+        // console.log(hello.name);
+        // hello.lName = 'kaur';
+        // console.log(hello.lName);
+        //  //fun ke pass free space hota h usme aap data add kr skte ho
+        // //prototype : is a object ,which help to do anything in fun. is free space in fun.
+        // console.log(hello.prototype);
+        // //only function provide prototype proprities.
+
+        // hello.prototype.age = 45;
+        // hello.prototype.xyz = 'xys';
+        // hello.prototype.run = function() {
+        //     console.log("i am runing");
+        // }
+        
+        function Person (){
+            this.name = 'samar';
+            this.age = 34;
+        }
+        //prototype value of person
+        const person = new Person();
+        console.log(Person.prototype);
+
+        Person.prototype.gender = 'male';
+        console.log(Person.prototype.gender);
+
+        const obj1 = {}
+        function fun() {
+
+        }
+        if(fun.prototype){
+            console.log('Prototype is persent');
+        }
+        else{
+            console.log('Prototype is not  persent');
+
+        }
+        if(obj1.prototype){//object having not any prototype
+            console.log('Prototype is persent');
+        }
+        else{
+            console.log('Prototype is not persent');
+
+        }
+        //obj . le inside me fun se kya obj toh v nho hogi obj ki prototu[e.]
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //After using const we can change obj : No change in memory address  , but the values change only
+        // const obj = {name:'Ram', age: '21',gender:'male'};
+        // console.log(obj);
+        // const resultingKeys = obj.keys();//gives error
+        // const resultingKeys = Object.keys("obj");//convet it into an object then index is pic as keys.
+        // console.log(resultingKeys);
+
+    //     const resultingKeys = Object.keys(obj);//prp
+    //     console.log(resultingKeys);
+
+    //     const arr = Object.keys("obj");
+    //     console.log(arr);
+
+
+    //    const v = arr.map((item) => obj[item])
+    //    console.log(v);
+
+    //    const k = arr.map((item) => item)
+    //    console.log(k);
+
+
+    //<===========================================>
+    // not insted obj:deep : parent not  chn after copy . when nested obj :shallow copy : parent chn after shallow copy.
+  
+    //A shallow copy  : creates a new object or array, but it doesn't create copies of nested objects or arrays. 
+    //Instead, it copies references to the nested objects or arrays.
+    // As a result, changes made to nested objects or 
+    //arrays in the copied structure will affect the original structure.
+
+    //A deep copy : creates a completely independent copy of the original object or array,
+    // including all nested objects or arrays. Changes made to the copy do not affect the original structure,
+    // and vice versa.
+
+
+    const obj1 = {name:'Ram', age: '21',gender:'male'};
+    console.log(obj1);
+
+    const deepcopyobj = {...obj1}
+    console.log(deepcopyobj);
+    deepcopyobj.name = 'samar'
+    console.log(obj1 , deepcopyobj);
+
+    const obj2 = {
+        car:{vw:'polo'},
+        model:2014
+    }
+    console.log(obj2);
+
+    const shallowCopyOfCar = {...obj2}
+    console.log(shallowCopyOfCar);
+
+    const chn = shallowCopyOfCar.car.vw = 'zeta';
+    console.log(chn);
+    console.log(shallowCopyOfCar);
+    console.log(obj2);
+
+    //deep copy of shallow obj.
+    const stringifiedOfObj = JSON.stringify(obj2)
+    const parseObj = JSON.parse(stringifiedOfObj)
+    parseObj.car.vw = 'virtus'
+    console.log(obj2,parseObj);
+    
+    </script>
+</body>
+</html>

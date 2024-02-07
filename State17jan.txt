@@ -1,0 +1,291 @@
+State
+The state is an updatable structure that is used to contain data or information about the component and can change over time. The change in state can happen as a response to user action or system event. It is the heart of the react component that determines the behavior of the component and how it will render. A state must be kept as simple as possible. It represents the component's local state or information. It can only be accessed or modified inside the component or by the component directly.
+
+Props
+Props are read-only components. It is an object that stores the value of attributes of a tag and works similarly to the HTML attributes. It allows passing data from one component to other components. It is similar to function arguments and can be passed to the component the same way as arguments passed in a function. Props are immutable so we cannot modify the props from inside the component.
+
+
+Difference between State and Props
+
+SN	Props	--------------		State
+1.	Props are read-only.---	State changes can be asynchronous.
+2.	Props are immutable.----	 state is mutable.
+3.	Props allow you to pass 
+	data from one component to other components as an argument. ---	State holds information about the components.
+4.	Props can be accessed by the child component.--- -State cannot be accessed by child components.
+5.	Props are used to communicate between components.------States can be used for rendering dynamic changes with the component.
+6.	Stateless components can have Props.-------Stateless components cannot have a State.
+7.	Props make components reusable.-----State cannot make components reusable.
+8.	Props are external and controlled by whatever renders the component.-----The State is internal and controlled by the React Component itself.
+
+The below table will guide you about the changing in props and state.
+
+SN	Condition	-------				Props	State
+1.	Can get initial value from parent Component?--	Yes	Yes
+2.	Can be changed by parent Component?-----      Yes   	No
+3.	Can set default values inside Component?---- Yes	Yes
+4.	Can change inside Component? -----		No	Yes
+5.	Can set initial value for child Components?----	Yes	Yes
+6.	Can change in child Components?		----	Yes	No
+
+
+what is hook in react?
+Hooks are the new feature introduced in the React 16.8 version. It allows you to use state and other React features without writing a class. Hooks are the functions which "hook into" React state and lifecycle features from function components. It does not work inside classes.
+
+Hooks are backward-compatible, which means it does not contain any breaking changes. Also, it does not replace your knowledge of React concepts.
+
+When to use a Hooks?
+If you write a function component, and then you want to add some state to it, previously you do this by converting it to a class. But, now you can do it by using a Hook inside the existing function component.
+
+Rules of Hooks
+1. Only call Hooks at the top level
+Do not call Hooks inside loops, conditions, or nested functions. Hooks should always be used at the top level of the React functions. This rule ensures that Hooks are called in the same order each time a components renders
+2. Only call Hooks from React functions
+You cannot call Hooks from regular JavaScript functions. Instead, you can call Hooks from React function components. Hooks can also be called from custom Hooks.
+
+Pre-requisites for React Hooks
+Node version 6 or above
+NPM version 5.2 or above
+Create-react-app tool for running the React App
+
+Hooks State
+Hook state is the new way of declaring a state in React app. Hook uses useState() functional component for setting and retrieving state.
+
+UseState hooks example:-
+import React, { useState } from 'react';
+
+function Counter() {
+  // Using the useState hook to declare a state variable 'count'
+  // The first element of the array is the current state value, and the second is a function to update the state
+  const [count, setCount] = useState(0);
+
+  // Event handler to increment the count when the button is clicked
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  const handleReset = () => {
+    setCount(0);
+  };
+
+  // Event handler to decrement the count when the button is clicked
+  const handleDecrement = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleReset}>Reset</button>
+      <button onClick={handleDecrement}>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+Second Example:-
+import React, { Component } from 'react'
+
+class ClassCounter extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            count:0,
+        }
+    }
+    incrementCount = () => {
+        this.setState({
+            count: this.state.count +1
+        })
+
+    }
+  render() {
+    return (
+      <div>
+        <button onClick={this.incrementCount}>Count {this.state.count}</button>
+      </div>
+    )
+  }
+}
+
+export default ClassCounter
+
+////////--------------------------?19jan2024
+important hooks :
+useState hook
+Hot reloading :automatically reloading the react page.
+state : jab v koi  chiz aaye to uski update value dekhne ke liye state use krege . when we have  to show the dynamic behaviour of a variable.
+koi v function kya leta or kya return krta ha we have to know this .
+
+fun with default call have not use{}
+namecomponent use {}.
+
+useState : useState[0]=return array
+useEffect:managed lifecycle method 
+
+jab v koi depency ho to callback chakega hi chalega ek bar toh.
+
+useeffect :
+1. jab v component mount hoga tab chalega.
+
+react string mood :je main.jsx me hota h . check krta h ki koi error to nhi aa rha ,to locla pr hi 2 baar chale ta h
+. when host on actual wesite toh 1 baar hi chlaega,
+
+useEffect:callback,depency array
+1[]empty:mount,depency,fr nhi,: wmpty array me chkega or outside console me v baar baar chalega.
+2.[]pass : jab v change ho ehi h tab chalega.
+3.nhi[]pass : koi v state change ho rhi h to chalega
+
+//debouncing/throlating : api  wait for user to type then api will call.
+//pagination : loading in parts .
+/scs extension for css
+
+//Pixabay : image generator-> My Personal API key :
+//const BASE_URL = "https://pixabay.com/api/ ";
+// const API_KEY = "41907259-7c0b00c9abd8792cc6e517452";
+
+//link tag internally use <a> tag but not load.:
+browser ko anchor tag hi duya
+
+
+higherorder component
+//interview ques :
+lifecycle method: hooks
+//depency array ,return
+useref and useeffect 
+useref and normal variable
+debouncind v/s throlating
+
+
+
+In React, the render function is a required method in any class component that extends React.Component because it is responsible for defining what the component should render on the screen. When you create a class component in React, it must extend the React.Component class, and part of the contract is that it should have a render method.
+
+The purpose of the render method is to describe the structure of the component using JSX. JSX is a syntax extension for JavaScript recommended by React that looks similar to XML or HTML. The render method returns JSX, and React uses this JSX to build a virtual representation of the UI.
+
+Here's why the render method is required:
+
+UI Description: The render method is where you define the UI structure of your component using JSX. It describes what the component should render based on its current state and props.
+
+Reactivity: React relies on the render method to determine what the UI should look like. When the component's state or props change, React will re-invoke the render method to update the UI accordingly.
+
+Virtual DOM: The JSX returned by the render method is used to create a virtual representation of the DOM. React then efficiently updates the actual DOM based on the changes between the virtual DOM and the real DOM.
+
+While the render method is required, other lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount are optional and can be implemented based on the specific needs of your component.
+
+In functional components, the equivalent to the render method is simply the function itself. Functional components directly return JSX without the need for a separate render method.
+
+class component inside class component :
+import React, { Component } from 'react';
+
+// Child Component
+class ChildComponent extends Component {
+  render() {
+    return (
+      <div>
+        <p>This is the Child Component.</p>
+      </div>
+    );
+  }
+}
+
+// Parent Component
+class ParentComponent extends Component {
+  render() {
+    return (
+      <div>
+        <h1>This is the Parent Component</h1>
+        {/* Child component included here */}
+        <ChildComponent />
+      </div>
+    );
+  }
+}
+
+export default ParentComponent;
+
+
+//20jan :
+//Ques1 . Reconciliation is part of diffing algo
+q2. The diffing algorithm in React follows a set of steps to efficiently update the DOM:
+Virtual DOM Representation: React maintains a virtual representation of the DOM, known as the Virtual DOM. ...
+Element Diffing: React performs a diffing process by comparing the previous Virtual DOM tree with the new one.
+
+
+//try-catch : apply when : 
+
+1.asyn opertation
+
+.jason = when asyn call to api . it convert jason to javascript object.
+.jason.parse : for normal call .
+
+
+//storage :Application -> localstorage.
+
+//useContext:to see 
+
+
+//1.hosting
+//2.props
+//3.acoden : one opne then rest of get closed.
+//4.exception handeling.
+//5.reconcilation,useSateset:callback,spread operation
+//4.Jason,
+//5.props drilling :"Props drilling" is a term used in the context of React, a popular JavaScript library for building user interfaces. It refers to the process of passing down props (short for properties) through multiple layers of nested components in order to provide data or functionality to deeply nested child components.
+
+//e-commerce
+movie
+//firebase: backend showkets. // real time communication //emita nd listen
+//Chat application
+
+
+//21jan : 
+props driling : useContext ->State management method
+
+//new Arrays[1024].join('a')
+
+//useparam
+//navigators
+
+
+//quwes
+
+//promises
+//slice vs splice
+..deep and shallow copy
+//this//await use
+//hogher order function
+//string reverse.
+//virtual dom
+//key we use key in map
+//controllerred and uncontrolled components
+//diffing algo
+//useRef vs useState
+//useEffect : depemcy,empty,nothing
+
+//hosting in var and let
+
+//24/12/24 h/w
+//how an object find its value.
+//form validetation
+
+//hooks alterate library : 
+recoil
+juciestack
+redex
+redirect
+//--------------------------------------------->
+Mongoos:
+
+//restfull api:
+standarad and rules : communication b/w browser  and client . 
+rest and response . independent to each other . 
+response in any format,
+html:  ssr Server side rendering
+ggogle,utube vv use krta h ,
+jason me clent query krega server ke upper to hmare datab ase se jason value cleint ke pass jayegi.
+server and client response are dependent on each other and works indepent on each other machine 
+
+>
+fs : used to create a file 

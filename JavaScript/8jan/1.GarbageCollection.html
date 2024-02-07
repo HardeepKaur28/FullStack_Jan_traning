@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn" id="btn">Click Me</button>
+    <!-- Garbage collection in JavaScript is the automatic process by which the JavaScript engine manages memory 
+        and identifies and frees up resources (memory) that are no longer in use or referenced by the program.
+         JavaScript uses a garbage collector to perform this task, helping developers avoid manual memory management and
+          reducing the risk of memory leaks. 
+    -->
+<script>
+
+    // Asynchronous operations in JavaScript, such as timers, network requests, and user events, are handled by the event loop.
+    //Event Loop Phases:
+    // The event loop consists of multiple phases, each handling different types of tasks.
+    // Stack Execution: The synchronous code is executed, and function calls are added to the call stack.
+    // Callback Queue (Task Queue): Asynchronous tasks, callbacks, and events are placed in a queue to be processed.
+    // Event Loop: The event loop continuously checks the call stack and the callback queue.
+    // If the call stack is empty, it takes the first task from the callback queue and pushes it onto the call stack for execution.
+        
+    //callback : 
+    // const a = b =>b+5; //one parameter function.
+    
+    // let a = 5;
+    // console.log(a ,"a");
+
+    // function x(y){
+    //     console.log(x,'x is called');//x is defination
+    //     setTimeout(()=>{
+    //         console.log('timeout');
+    //     },[0])
+    //     y();
+    // }
+
+    // function y(){
+    //     console.log(y , "y is called");
+    // }
+    // x(y);
+
+
+    // let count  =0;
+    // document.getElementById("btn").addEventListener('click',()=>{
+    //     console.log('button is clicked');
+    //     console.log('button clicked' ,++count);
+    // })
+
+    //data hidding : 
+    // function countButtonClicked(){
+    //     let count  =0;
+    //     document.getElementById("btn").addEventListener('click',()=>{
+    //     console.log('button is clicked');
+    //     console.log('button clicked' ,++count);
+    // })
+    // }
+    // countButtonClicked();
+
+    //only the exapmle for callback for shopping weebsite.
+    //callback heels ,parameters of loops  : 2 terms for below callbacks 
+    // const card = ["ps5",'top','jeans'];
+    // createCard(card,(order) =>{
+    //     showCardScreen(order,(response) =>{
+    //         checkOutPage(response,(price) =>{
+    //             paymentPage(price,()=>{
+    //                 alert("order placred")
+    //             })
+    //         })
+    //     });
+    // })
+    
+    //Then above  code is complex so we use promise : 
+    // createCart(order)
+    // .then(order => showCartScreen(order))
+    // .then(response => checkoutPage(response))
+    // .then(price => paymentPage(price))
+    // .then(response => alreat("Order Placed"))
+        
+
+    //drawbacks of callbacks : 
+    //1.pyramid of doom or callback hell.
+    //2. Inversion of control. : all over control is transfer to another function
+    
+    //callback resolve by concept Promise :
+    //the above problem is slove by promise .
+
+    //{} jab v bracket hogi to return krna hoga.//Promise return in 3 states : pending , fullfill , rejected
+    //when promise not return anything then the below code is falied.
+
+    //create a promise : 
+    // new Promise(function(resolve,reject){
+    //     console.log("promise 2");
+    //     setTimeout(()=>{
+    //         console.log("setTimeOut 2");
+    //     },1000)
+    //     resolve("resolve 1")
+    // }).then(()=>{
+    //     console.log("dot then 1");
+    //     setTimeout(()=>{
+    //         console.log("setTimeOiut 3");
+    //     })
+    // })
+
+    
+    //empty array,empty string , lim. of arrow function.
+
+    const order = {name : "top",orderId : 1};
+    const price = {
+        1: 500,
+        2:300,
+        3:40000
+    }
+
+    const promise  = createCart(order)
+    console.log(promise,"promise<><><><><>")
+    promise.then((orderId)=>{
+    return checkOutPage(orderId)
+    })
+    .then((price)=>{
+    console.log(price,"price<><><<>><")
+    })
+    // .then(() =>{
+    //     console.log("Price");
+    //     alert(`Total${price}`)
+    // })
+    // .then((price)=>{//shows undefined because there is no any return.
+    // console.log(price,"price<><><<>><")
+    // })
+    .catch((err)=>{
+    console.log(err,"error<><><>")
+    })
+    .then(()=>{
+    console.log("will it work !??????")
+    })
+   
+
+    // function createCart(order){
+    
+    // const promise = new Promise(function(resolve, reject){
+    //     const isValidate = validateCart(order)
+    //     if(isValidate){
+    //         setTimeout(()=>{
+    //             resolve(order.orderId)
+    //         },2000)
+            
+    //     }
+    //     else{
+    //         reject("Cart is not valid")
+    //     }
+    // })
+    //     return promise;
+    // }
+
+    // function validateCart (order){
+    //     console.log(Object.keys(order))
+    //     if(Object.keys(order).length && order.orderId){
+    //         return true 
+    //     }
+    //     else{
+    //         return false
+    //     }
+    // }
+
+    // function checkOutPage(orderId){
+    //     const orderPrice = price[orderId]
+    //     console.log(orderPrice,orderId,"orderPrice<><><.")
+    //     return orderPrice
+    // }
+
+    // function PaymentPage(price){
+    //     const rs = price;
+    //     console.log(rs);
+    //     return rs;
+       
+    // }
+
+    
+</script>
+</body>
+</html>

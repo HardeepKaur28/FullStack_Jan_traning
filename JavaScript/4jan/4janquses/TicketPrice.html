@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket price</title>
+</head>
+<body>
+    <h1>Ticket Price</h1>
+    <form action="">
+        <label for="num">Enter a Age : </label>
+        <input type="number" id="num" required>
+        <button type="button" onclick="Price()">Ticket Price</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        function Price(){
+            let age = document.getElementById("num").value;
+            console.log(age);
+            let ticketprice;
+            if(age <= 12){
+                ticketprice = 5;
+            }
+            else if(age <= 18){
+                ticketprice = 10;
+            }
+            else if(age <= 60){
+                ticketprice = 20;
+            }
+            else{
+                ticketprice = 15;
+            }
+            document.getElementById("result").textContent = `The Ticket price for age ${age} is $ ${ticketprice}`;
+        }
+    </script>
+</body>
+</html>

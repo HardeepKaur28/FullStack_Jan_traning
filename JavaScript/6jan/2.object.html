@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //[] : values check 
+        //. : values may not access
+        
+        const obj = {name:'Ram', age: '21',gender:'male'};
+        console.log(obj);
+        const ValueToBeAccess = "name";
+        // const bracket = obj[ValueToBeAccess];
+
+        console.log(obj.ValueToBeAccess); //not check value
+        console.log(obj[ValueToBeAccess]); //match value also
+        
+        obj['number'] =  8;
+        console.log(obj);
+       
+        obj['name'] ='samar';
+        console.log(obj);
+    </script>
+</body>
+</html>

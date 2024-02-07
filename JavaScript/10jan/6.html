@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ///static : static function is call by using their class name and their propeities.
+        // class abc{
+        //     static name = 'Hardeep';
+        //     static age = 15;
+        //     static fun() {
+        //         console.log('this is a static function');
+        //     }
+        // }
+
+        // const obj1 = new abc();
+        // console.log(obj1.name);//undefined
+        // obj1.fun();//gives error
+        //because of static is call by using class name
+        // console.log(abc.name);
+        // abc.fun();
+
+        class abc{
+            static name = 'Hardeep';
+            static age = 15;
+            static fun(a,b) {
+                // console.log('this is a static function');
+                return a+b;
+            }
+            static{
+                console.log('static funciton');
+            }
+        }
+        //static block is used for  clone:
+        // let fName = abc.name;
+        // console.log(fName);
+        // abc.fun(4,4);
+        class xyz extends abc {//child class inhert the proprities of class so static functin can also works.
+           
+        }
+       const sum  =xyz.fun(4,5);
+       console.log(sum);
+
+    </script>
+</body>
+</html>

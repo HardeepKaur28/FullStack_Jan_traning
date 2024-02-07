@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("begins ");
+        setTimeout(()=>{
+            console.log("begins 2");
+            Promise.resolve().then(()=>{
+                console.log("Promise 1");
+            })
+        },[0])
+
+        new Promise(function(resolve,reject){
+            console.log("promise 2");
+            setTimeout(() =>{
+                console.log("setTimeOut2");
+                resolve('reslove 1')
+            },[0])
+        }).then(() =>{
+            console.log("dot then 1");
+            setTimeout(() =>{
+                console.log("setTimeOut 3");
+            },[0])
+        })
+    </script>
+</body>
+</html>

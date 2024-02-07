@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call() function  : 
+       
+        const user1 = {
+            fName : 'Hardeep',
+            age : 19,
+            about : function () { //this is called method
+                console.log(`${this.fName} , ${this.age}`);
+            }
+        }
+         const user2 = {
+            fName :"Rubi",
+            age:9
+        }
+        console.log(user1);
+        console.log(user2);
+        user1.about.call(user2);//user1 ->about() ->call () ->reference ->user2
+        console.log(user2);
+        
+    </script>
+</body>
+</html>

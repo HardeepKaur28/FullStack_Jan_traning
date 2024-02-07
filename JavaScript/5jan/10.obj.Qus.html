@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //obj : no index number
+        const key = 'email';
+        const obj = {
+            name : "Samar",
+            age : 36,
+            weight : '34kg'
+        }
+        obj[key] = 'ss@gmail.com'; // email as key in obj
+         console.log(obj);
+        // obj.key = 'd@gmail.com'; // key as key in obj
+        console.log(obj);
+
+        //how to iterate obj 
+        for(let key in obj){
+            // console.log(key);//Print only key
+            console.log(obj[key]);//Print only value
+        }
+
+        //To Print Both Key and Value Together : 
+        for(let key in obj){
+            // console.log(`${key} : ${obj[key]}`);
+            console.log(key,obj[key]); // , : it can concat as well as give space in key and value pair.
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call(), apply(), bind()
+        function about(hobby,favSinger){
+            console.log(`${this.fName} , ${this.age} ,${hobby},${favSinger}`);
+        }
+        const obj1 ={
+            fName : 'Hardeep',
+            age : 19,
+        }
+        const obj2 ={
+            fName : 'Rubi',
+            age : 59,
+        }
+        console.log(obj1);
+        //usig call() function : call updata object
+        about.call(obj1,"yoga","honey Singh");
+        console.log(obj1);
+
+        // apply()
+        about.apply(obj1,['music','MZee bella']);
+
+        //bind() : function return  with same data.
+        
+        //  const mydata= about.bind(obj1);//take object and its data is placed in function
+        const mydata= about.bind(obj1,"playing","King");
+        mydata();
+        console.log(obj1);//we can use obj data in function but can't add add into obj by function.
+    </script>
+</body>
+</html>

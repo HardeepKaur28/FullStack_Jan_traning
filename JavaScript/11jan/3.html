@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><form action="">
+    <!-- <input type="button" onclick="clickEvent()" value="who's this?" id="input" /> -->
+    <!-- <button onmouseover="mouseOverevent()">click</button> -->
+   <!-- <button onmouseout="mouseOut()" id="btn1"> mouseOver</button>  -->
+   <!-- <div id="box1"  style="height: 200px; width: 300px; background-color: aqua;">box 1</div><br>
+   <div id="box2" style="height: 300px; width: 300px; border: 2px solid black;">box 2</div><br><br> -->
+    <label for="keyupandDown">KeyUPAndDown</label>
+   <input type="text" placeholder="type something" id="keyupandDown">
+</form>
+<br><br>
+
+    <!-- Mouse Event : 
+    click : onclick when mouse click on an event.
+    mouseover : on mouseover when the curoser of the mouse comes over the element
+    mouseout : on mouseout when the curoser of the mouse leave over the element
+    mousedown : on mousedown when the curoser of the mouse comes over the element
+    mouseup : on mouseup when the mouse button is released over the element
+    mousemove: on mousedoen when the mouse movemenet take place.on the element.
+
+    keyboard event :
+    keydown-keyup : on keydowen and onkeyup when the user press and then release the element.
+
+    Form event :
+    -->
+    <script>
+        // function clickEvent(){
+        //     document.write("this is javaScript language");
+        // }
+        // function mouseOverevent(){
+        //     alert("you  are on mouse over");
+        // }
+        // function mouseOut(){
+        //     document.getElementById('btn1').style.color = 'red';
+        // }
+        // function mouseDown(){
+        //     document.getElementById('box1').style.backgroundColor = 'red';
+        // }
+
+        // let Div =  document.getElementById('box1');
+        // Div.addEventListener('mouseout' ,function(){
+        //     Div.style.backgroundColor = 'red';
+        // })
+        // Div.addEventListener('mouseover',function(){
+        //     box1.style.backgroundColor = 'pink';
+        // })
+
+        // let Div1=  document.getElementById('box2');
+
+        // Div1.addEventListener('mousedown' ,function(){
+        //    Div1.style.backgroundColor = 'yellow';
+        // })
+        // Div1.addEventListener('mouseup' ,function(){
+        //    Div1.style.backgroundColor = 'green';
+        // })
+        // Div1.addEventListener('mousemove' ,function(){
+        //    Div1.style.backgroundColor = 'blue';
+        // })
+
+        let keyupAndDown = document.getElementById("keyupandDown");
+        keyupAndDown.addEventListener('keydown',function(Event){
+            console.log(`key pressed : ${Event.key}`);
+        });
+        keyupAndDown.addEventListener('keyup',function(Event){
+            console.log(`keyup event-key released`);
+        });
+    </script>
+</body>
+</html>

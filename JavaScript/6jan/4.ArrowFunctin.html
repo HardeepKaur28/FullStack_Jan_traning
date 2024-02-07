@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sum = (a,b) => a+b ;
+        console.log(sum(3,4));
+
+
+        // const sum = (a,b) =>{
+        //     console.log(this); //refer to window otherwise refer to parent function
+        // }
+        // console.log(sum(3,4));
+
+        // function area(){
+        //     const sum = (a,b) =>{
+        //     console.log(this); //refer to window other refer to parent function
+        // }
+        // }
+        // console.log(area);
+
+        //diif b/w arrow and simple fun.
+        //fun : this concept , having self argument
+        //arrow fun : no this , without bracket can access arrow function, take argument from surrounding
+
+        // function s(){
+        //     const sum = () =>{
+        //     console.log(this); 
+        // }
+        // sum()
+        // }
+        //  console.log(s());
+        
+
+        //host concept : not concept in Arrow function
+        // console.log(sum());//gives error
+        //  const sum = () =>{
+        //     console.log(this); 
+        // }
+
+        //set Timeout funtion : arrow fun ,
+
+        // setTimeout(() =>{
+        //     console.log("This funtion is called once after a 1 second.");
+        // },[1000])
+
+    //    setInterval(() =>{
+    //         console.log("This funtion is called repeatly after a 1 second.",new Date());
+
+    //     },[1000]) //called atuomatically and intervalshow no. the use clear
+   
+        // const result = setTimeout((a) =>{
+        //     console.log("This funtion is called once after a 1 second.");
+           
+        // },[1000],'hello')
+        // console.log(result);
+
+        //----------------
+        // const clearInterval = setInterval(() =>{
+        //     console.log("This funtion is called repeatly after a 1 second.");
+
+        // },[1000])
+        // clearInterval(clearInterval)
+
+    //     console.log('gn');
+    //    setTimeout(() =>{
+    //     console.log("hi");
+    //    },[0])
+    //    console.log('hlo');
+
+   </script>
+</body>
+</html>

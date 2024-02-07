@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            gap: 10px;
+            grid-template: auto auto auto;
+            background-color: aqua;
+            display: grid;
+          
+        }
+        .grid-items-navbar{
+            height: 50px;
+            width: 100%;
+            grid-column: 1/4;
+            background-color: rgb(60, 0, 255);
+        }
+        .grid-items-header{
+            background-color: brown;
+            margin-top: 34px;
+            height: 50px;
+            width: 100%;
+            grid-column: 1/4;
+        }
+    
+        .grid-items{
+            height: 80vh;
+        
+           /* width: 100%; */
+        }
+    .left{
+        height: 80vh;
+       
+        background-color: cadetblue;
+    }
+    .right{
+        background-color: cadetblue;
+     
+    }
+    .body{
+        background-color: burlywood;
+     
+    }
+        .grid-items-footer{
+            grid-column: 1/4;
+            height: 50px;
+            width: 100%;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-items-navbar">navbar</div>
+        <div class="grid-items-header">header</div>
+        <div class="grid-items left">left</div>
+        <div class="grid-items body">body</div>
+        <div class="grid-items right">right</div>
+        <div class="grid-items-footer">footer</div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    <link rel="website icon" type="png" href="./OIP-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+          *{
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+          }
+        .first{
+            background-color:#0b0b5c;
+            height: 30px;
+            width: 100%;
+            margin-top: 0%;
+            text-align: center;
+        }
+        .first a{
+            color: white;
+            margin-left: 53px;
+            gap: 45px;
+        }
+        .btn1{
+            background-color: yellow;
+            margin-top: 0px;
+            margin-left:780px;
+            height: 30px;
+            border: none;
+            font-weight: 600;
+            font-size: 13px;
+            width: 90px;
+        }
+        .btn1:hover{
+            box-shadow: 2px 5px 5px grey;
+        }
+        #logotext{
+            color: black;
+            font-weight: 600;
+            font-size: 23px;
+            margin-top: -55px;
+            margin-left: 130px;
+            /* padding-top: 300px; */
+        }
+        .logo img{
+            height: 80px;
+            width: 90px;
+            margin-top: -17px;
+            margin-left: 50px;
+        }
+        .mynavbar{
+            background-color: rgb(130, 230, 230);
+            height: 50px;
+            width: 100%;
+            display: flex;
+        }
+        .list-items{
+            color:#808080;
+           display: flex;
+           text-align: center;
+           padding-left: 300px;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            font-weight: 530;
+            font-size:  19px;
+            margin-top: 15px;
+            margin-left: 70px;
+        }
+        input{
+            height: 30px;
+            width: 150px;
+            margin-top: 6px;
+            margin-left: 255px;
+            padding-left: 10px;
+            border-radius: 10px;
+        }
+        .mybody{
+            width: 100%;
+            height: 450px;
+            margin-top: 0%;
+            background-size: cover;
+            background-image: url(https://i.insider.com/60cbbde73093db001970204f?width=1200&format=jpeg);
+            /* background-image: url(https://ideatelabs.in/media/wp-content/uploads/2018/04/1494069646-students517.jpg); */
+            background-repeat: no-repeat; 
+        }
+       .overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .mybody p{
+            color: rgb(10, 35, 105);
+            font-size: 34px;
+            text-align: center;
+            margin-top: 0%;
+            padding-top: 90px;
+            font-weight: 900;
+            text-shadow: 2px 5px 8px white;
+        }
+        .btn2{
+            background-color: yellow;
+            /* margin-left: 700px; */
+            font-weight: 500;
+            font-size:   14px;
+            border: none;
+            border-radius: 10px;
+            height: 36px;
+            width: 95px;
+            margin-top: 39px;
+        }    
+        .btn2:hover{
+            box-shadow: 2px 5px 5px grey;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 30px;
+            position: absolute;
+            top: 53%;
+            left: 17%;
+        }
+        .grid-items{
+            background-color: rgb(130, 230, 230);
+            height: 301px;
+            width: 290px;
+            text-align: center;
+            border-radius: 20px;
+            padding: 12px 12px;
+        }
+        .grid-items:hover{
+            animation-name: slid;
+            animation-duration: 1s;
+            box-shadow: 2px 8px 9px rgb(159, 156, 156);
+        }
+        h2{
+            margin-top: 30%;
+            margin-bottom: 5%;
+        }
+        .mybtn{
+            height: 36px;
+            width: 95px;
+            background-color: yellow;
+            font-weight: 500;
+            font-size: 14px;
+            border-radius: 7px;
+            /* background-color: rgb(137, 106, 81); */
+            border: none;
+            margin-bottom:10%;
+            margin-top: 10%;
+        }
+        .mybtn:hover{
+            box-shadow: 2px 5px 5px grey;
+        }
+        @keyframes slid{
+            0%,100%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform:translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="first">
+            <a href="+142 5897555">+142 5897555</a>
+            <a href="@gmail.com">@gmail.com</a>
+            <button class="btn1">Apply Now</button>
+        </div>
+        <div class="mynavbar">
+            <div class="logo">
+                <img src="./OIP-removebg-preview.png" alt="" height="90px">
+                <h3 id="logotext">Mastery</h3>
+            </div>
+            <div class="list-items">
+                <a href="Home">Home</a>
+                <a href="About">About</a>
+                <a href="page">Pages</a>
+                <a href="contact">Contact</a>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Search here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+        </div>
+    </div>
+    <div class="mybody">
+        <div class="overlay">
+            <p>Better Education For A <br>Better World</p>
+            <button class="btn2">Read More</button>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-items">
+            <a href=""><i class="fa-regular fa-laptop"></i></a>
+            <h2>Learn Course online</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos porro rem praesentium eveniet ut magni, vitae veritatis atque, nesciunt quas, ullam iste cupiditate autem reiciendis. Ipsa quas possimus iure neque!</p>
+            <button class="mybtn">Read More</button>
+        </div>
+        <div class="grid-items">
+            <h2>Heigh Qualified Teachers</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos porro rem praesentium eveniet ut magni, vitae veritatis atque, nesciunt quas, ullam iste cupiditate autem reiciendis. Ipsa quas possimus iure neque!</p>
+            <button class="mybtn">Read More</button></div>
+        <div class="grid-items">
+            <h2>Book Library & Stores</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos porro rem praesentium eveniet ut magni, vitae veritatis atque, nesciunt quas, ullam iste cupiditate autem reiciendis. Ipsa quas possimus iure neque!</p>
+            <button class="mybtn">Read More</button></div>
+        </div>
+    </div>
+</body>
+</html>

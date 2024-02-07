@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(182, 202, 238);
+            
+        }
+        h1{
+            text-align: center;
+            position: relative;
+            margin-top: 100px;
+            color: rgb(22, 25, 112);
+        }
+        form{
+            text-align: center;
+        }
+       input{
+        height: 30px;
+        width: 160px;
+        padding-left: 20px;
+       }
+       label{
+        font-size: 23px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grocery List</h1>
+        <form action="">
+            <label for="name">Item :</label>
+            <input type="text" placeholder="Enter item" id="itemInput">
+            <label for="price">Price :</label>
+            <input type="number" min="1" placeholder="Enter Price" id="priceInput">
+            <button onclick="addItem">Add item</button>
+            
+            <ul id="groceryList"></ul>
+            <div class="total"></div>
+        </form>
+    </div>
+    <script>
+        function add(){
+            const itemInput = document.getElementById('itemInput');
+            const priceInput = document.getElementById('priceInput');
+
+            const itemName = itemInput.value.trim();
+            const itemPrice = parseFloat(priceInput.value);
+
+            if(itemName !== '' && !isNaN(itemPrice) && itemPrice >=0){
+                const groceryList = document.getElementById('grocerList');
+                const listItem = document.createElement('li');
+                listItem.classList = 'grocery-Item';
+
+                const itemNameElement = document.createElement('span');
+                itemNameElement.textContent = itemName;
+            }
+            const priceElement = document.createElement('span');
+            priceElement.textContent = `$${itemPrice.toFixed(2)}`;
+            priceElement.className = 'price';
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', () => removeItem(listItem, itemPrice));
+
+            listItem.appendChild(itemNameElement);
+            listItem.appendChild(priceElement);
+            listItem.appendChild(removeButton);
+
+            groceryList.appendChild(listItem);
+
+            updateTotal(itemPrice);
+
+            itemInput.value = '';
+            priceInput.value = '';
+    
+    }
+
+    function removeItem(item, itemPrice) {
+        const groceryList = document.getElementById('groceryList');
+        groceryList.removeChild(item);
+
+        updateTotal(-itemPrice);
+    }
+
+    function updateTotal(amount) {
+        const totalElement = document.getElementById('total');
+        const currentTotal = parseFloat(totalElement.textContent.replace('Total: $', '')) || 0;
+        const newTotal = currentTotal + amount;
+        totalElement.textContent = `Total: $${newTotal.toFixed(2)}`;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Positive Number</title>
+</head>
+<body>
+    <h1>Sum of Positive Numbers</h1>
+    <form>
+        <label for="num1">Enter a number</label>
+        <input type="number" name="num1" id="num1">
+        <button type="button" onclick="sum()">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function sum(){
+            let num1 = parseInt(document.getElementById("num1").value);
+            console.log(num1);
+            let s = 0;
+            while(num1 >= 0){
+                s = s + num1;
+                num1 = parseInt(prompt("enter a number :"));
+            }
+            console.log(s);
+            document.getElementById("result").textContent = `The Sum is ${s}`;
+
+        }
+    </script>
+</body>
+</html>

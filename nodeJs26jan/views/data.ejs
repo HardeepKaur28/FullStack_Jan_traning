@@ -1,0 +1,90 @@
+<%-include('nav')-%> 
+<!-- <%=data[0]%>
+<%=data[1]%>
+<%=data[2]%>
+<%=data[3]%>
+<%=data[4]%> -->
+
+
+
+
+<html>
+    <!-- <h1>For Loop : </h1>
+<% for (let i = 0; i < data.length; i++) { %>
+    <p>Element at index <%= i %>: ID - <%= data[i].id %></p>
+<% } %>
+
+<h2>For Each</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+       <tbody>
+        <% data.forEach(function(item) { %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.name %></td>
+            <td><%= item.course %></td>
+        </tr>
+        <br>
+        <% }); %>
+       </tbody>
+    </table>
+  
+
+
+    <div class="container">
+        <h1>Data Page</h1>
+
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(item) { %>
+                    <tr>
+                        <td><%= item.id %></td>
+                        <td><%= item.name %></td>
+                        <td><%= item.course %></td>
+                    </tr>
+                <% }); %>
+
+            </tbody>
+        </table>
+    </div> -->
+
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-6">
+            <table class="table table-bordered  table-striped">
+                <a href="/insert" class="btn btn-success mb-2">Add record</a>
+                 <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </tr>
+                 </thead>
+
+                    <% data.forEach(function(item) { %>
+                        <tr>
+                            <td><%= item.id %></td>
+                            <td><%= item.name %></td>
+                            <td><%= item.course %></td>
+                            <td><a class="btn btn-danger">Delete</a>
+                            <a class="btn btn-Warning">Edit</a </td>
+                        </tr>
+                    <% }); %>
+        </div>
+    </div>
+</html>

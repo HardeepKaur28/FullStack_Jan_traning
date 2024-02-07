@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .gallery{
+            display: flex;
+            gap: 30px;
+            grid-template-columns: repeat(3,1fr);
+            max-width: 20%;
+            margin: 4% 0% 0% 2%;
+        }
+        .gallery img{
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            transition: scale 350ms ease, opacity 350ms linear;
+        }
+        .gallery:has(img:hover) img:not(:hover){
+            scale: 0.8;
+            opacity: 0.5;
+        }
+        .gallery img:hover{
+            box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4,0 0 25px #03e9f4,0 0 100px #03e9f4;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="./08580066565256e.jpg" alt="img1">
+        <img src="./d4050a_98477dffdaa84432bdc528ba7add3a37_mv2_fe038696-fb27-4bf7-a7ff-3283bbad58e9.jpg" alt="img2">
+        <img src="./istockphoto-1459328810-612x612.jpg" alt="img2">
+    </div>
+</body>
+</html>

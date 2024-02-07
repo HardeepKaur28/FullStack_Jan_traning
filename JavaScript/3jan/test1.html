@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 3px solid rgb(180, 209, 220);
+            height: 330px;
+            align-items: center;
+            margin-top: 15%;
+            background-color: rgb(180, 224, 239);
+        }
+        h1{
+            text-align: center;
+            color: #1a157d;
+            font-weight: 900;
+            font-size: 34px;
+            text-shadow: 2px 8px 9px gainsboro;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p{
+            color: rgb(94, 4, 4);
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 74px;
+        }
+        input{
+            height: 34px;
+             width: 198px;
+            position: absolute;
+            text-align: center;
+            left: 41%;
+        }
+        button{
+            height: 41px;
+            width: 102px;
+            position: absolute;
+            left: 56%;
+            background-color: rgb(133, 163, 214);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1>Age Check</h1>
+        <p>Enter  your Age: </p>
+        
+        <input type="number" placeholder="Enter Your Age" id="ageInput" min="1" max="200" required>
+        <button onclick="checkAge()">Check Age</button>
+     
+        <p id="result"></p>
+    </div>
+    <script>
+       
+    function checkAge() {
+        const age = document.getElementById("ageInput").value;
+        const beverage = age >= 21 ? "Beer" : "Juice";
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = `You are ${age} years old. You can have: ${beverage}`;
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj1 = {
+            key1: "value1",
+            key2: "value2"
+        }
+
+        // const obj2 = {S
+        //     key3: "value3"
+        // }
+
+        // console.log(obj1.key1);
+        // console.log(obj2.key1);//ites gives undefined , it does allow to see the items of obj1.
+        
+        
+        //so we created  obj2 by using :  Object.create(obj2)
+        //refernce through prototyoe: 
+         
+        console.log(obj1.key1);
+       const obj2 = Object.create(obj1);//allow to see the items of obj1
+       console.log(obj2);
+       console.log("obj1.key1",obj1.key1);
+
+       console.log("obj2.key1",obj2.key1);
+       console.log(obj2.__proto__);//helps to see  the items  inside the object.
+      
+       obj2.key3 = 'value3';
+       console.log('obj2',obj2);
+       const obj3 = {
+            key1: "value1",
+            key2: "value2",
+            key3 : 'value3'
+       }
+       console.log('obj3' ,obj3);
+       console.log(obj2 === obj3);
+    </script>
+</body>
+</html>

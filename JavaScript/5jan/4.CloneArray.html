@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Clone</title>
+</head>
+<body>
+    <script>
+        //clone : 
+        // In JavaScript, when you talk about cloning an array, 
+        //you are referring to creating a new array that is a copy of the original array.
+        // This means that changes made to the original array or the cloned array do not affect each other. 
+        //There are a few ways to clone an array in JavaScript:
+
+        let a1 = ['a' ,'b' ,'c' ,'d'];
+        let a2 = a1;
+        console.log(a1===a2);
+
+        let b1 = [1,2,3,4];
+        let b2 = [];
+        
+        for(let i =0;i<b1.length;i++){
+            b2[i] = b1[i];
+        }
+        console.log("b2 :  " + b2);
+        console.log(b1 === b2);
+
+        //clone mrthods : 1. slice  2. concat 3. spread operator : ...arrayName
+       
+       //method 1 : slice
+        b2 = b1.slice(0);
+        console.log(b2);
+        console.log(b1 === b2);
+
+        // let c1 = [11,22,33];
+        // let c2 = [11,22,33];
+        // console.log(c1 === c2);
+
+        // var d1 = [111,222,333];
+        // var d2 = [111,222,333];
+        // console.log(d1 === d2);
+
+        //: 2method :concat 
+        let a11 = ['aa' ,'bb','cc'];
+        let a22 = [];
+
+        a22 = [].concat(a11);
+        console.log("a22:  " + a22);
+
+        //3.method :[...arrName] : spread operator
+        let arr1 = ['xx','cc','vv'];
+        let arr2 = [];
+
+        arr2 = [...arr1];
+        console.log(arr2);
+
+        //combined concept to add elements to an array : 
+        ar1 = ['h','a','r'];
+        ar2 =[];
+        ar2 = ar2.concat(ar1,['d','e','e','p']);
+        console.log(ar2);
+
+        br1 = ['j','o','t'];
+        br2 =[];
+        br2 = [...br1 ,'v','i','r'];
+        console.log(br2);
+    </script>
+</body>
+</html>

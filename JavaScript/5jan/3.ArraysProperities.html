@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Properities</title>
+</head>
+<body>
+    <script>
+        let a = ['a','b','c','d'];
+        console.log(a);
+        console.log(a.length); //4
+        console.log("first element : " + a[0]);
+        console.log("Last element : " + a[a.length-1]);
+
+        //Arrays functions for add and remove element : 
+        //1.add elememt : push() : to end index
+        let a1 = ['ram','sham','abhi','samar'];
+        console.log(a1);
+        a1.push('jot');
+        console.log(a1);
+
+        //2 .remove element: pop() : from end index 
+        a1.pop();
+        console.log(a1);
+
+        a1.shift();//pop from first index 
+        console.log(a1);
+
+        a1.unshift('deepu');//push to first index
+        console.log(a1);
+
+        //at specific index :
+        a1.splice(2,0,'preet');
+                // index, remove no. of element, value
+        console.log(a1);
+
+        a1.splice(3,1,'hk');
+        console.log(a1);
+
+    </script>
+</body>
+</html>

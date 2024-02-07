@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template2</title>
+    <style>
+      *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .first{
+            background-color:#0b0b5c;
+            height: 30px;
+            width: 100%;
+            align-items: center;
+            /* margin-top: 0%;
+        */
+        }
+      .first a{
+            color: white;
+            /* margin-left: 53px; */
+            gap: 45px;
+        }
+        .btn1{
+            background-color: yellow;
+            margin-top: 0px;
+           margin-left:780px;
+           height: 30px;
+           border: none;
+           font-weight: 600;
+           font-size: 13px;
+           width: 90px;
+        }
+        .btn1:hover{
+            box-shadow: 2px 5px 5px grey;
+
+        }
+        #logotext{
+            color: black;
+            font-weight: 600;
+            font-size: 23px;
+            padding-top: 300px;
+        }
+        .mynavbar{
+            background-color: rgb(130, 230, 230);
+            height: 50px;
+            width: 100%;
+            display: flex;
+        }
+        .list-items{
+            color:#808080;
+           display: flex;
+           text-align: center;
+           padding-left: 300px;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            font-weight: 500;
+            font-size:  19px;
+            margin-top: 10px;
+            margin-left: 70px;
+        }
+        input{
+            height: 30px;
+            width: 150px;
+            margin-top: 6px;
+            margin-left: 200px;
+            padding-left: 10px;
+            border-radius: 10px;
+        }
+        .mybody{
+            width: 100%;
+            height: 450px;
+            margin-top: 0%;
+            background-size: cover;
+            background-image: url(https://i.insider.com/60cbbde73093db001970204f?width=1200&format=jpeg);
+            /* background-image: url(https://ideatelabs.in/media/wp-content/uploads/2018/04/1494069646-students517.jpg); */
+            background-repeat: no-repeat;
+           
+            
+        }
+        .mybody p{
+            color: rgb(10, 35, 105);
+            font-size: 34px;
+            text-align: center;
+            margin-top: 0%;
+           padding-top: 90px;
+           font-weight: 900;
+           text-shadow: 2px 5px 8px wh;
+        }
+        .btn2{
+           
+            background-color: yellow;
+            margin-left: 700px;
+            font-weight: 600;
+            font-size:   16px;
+            border: none;
+            border-radius: 10px;
+            height: 42px;
+            width: 104px;
+        }    
+        .btn2:hover{
+            box-shadow: 2px 5px 5px grey;
+        }
+       .container{
+       
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+        
+        
+       }
+       .grid{
+        height: 300px;
+        width: 300px;
+        background-color: aqua;
+        
+        
+       }
+        
+    </style>
+</head>
+<body>
+   
+         <div class="first">
+          <a href="+142 5897555">+142 5897555</a>
+          
+            <a href="@gmail.com">@gmail.com</a>
+            <button class="btn1">Apply Now</button>
+         </div>
+         <div class="mynavbar">
+            <div class="logo">
+            <!-- <img src="https://th.bing.com/th/id/OIP.-L2GVPwUv9pBLiAr9zBvSAHaGH?w=240&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt=""> -->
+            <span id="logotext">Mastery</span>
+            </div>
+            <div class="list-items">
+                <a href="Home">Home</a>
+                <a href="About">About</a>
+                <a href="page">Pages</a>
+                <a href="contact">Contact</a>
+            </div>
+            <form action="">
+                <input type="text" placeholder="search here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+         </div>
+  
+    <div class="mybody">
+        <p>Better Education For A <br>Better World</p>
+        <button class="btn2">Read More</button>
+    </div>
+    
+    <div class="container">
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+    </div>
+</body>
+</html>

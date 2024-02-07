@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.0.11"
+  }
+}

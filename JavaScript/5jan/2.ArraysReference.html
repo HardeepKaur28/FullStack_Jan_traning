@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Concept</title>
+</head>
+<body>
+    <script>
+        //array reference type : 
+        
+        let n1 = 6;
+        let n2 = 6; //address stores in  : stack 
+        console.log(n1===n2); //true
+        n1++;
+        console.log(n1===n2); //false
+
+        let a1 = [1,2,3];
+        let a2 = [1,2,3];
+        console.log(a1===a2);//because of two different arrays is here . //false
+
+        let a3 = [6,7,8];
+        let a4 = a3; //data as well as address is assigned.
+        console.log(a3===a4);//true
+
+        a3.push(9);//add new element into a3 
+        console.log(a3);
+        console.log(a3===a4);//true
+        console.log(a4);
+
+    </script>
+</body>
+</html>

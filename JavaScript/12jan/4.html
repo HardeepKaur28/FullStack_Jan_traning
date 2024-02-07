@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your plan for Today ?</h1>
+ 
+        <input type="text" name="" id="input" placeholder="Add Todo">&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="btn" type="submit" sub="onclick">submit</button>
+   
+        <div class="result"></div>
+        <!-- <ul class="todo-list">
+            <li>
+                <span class="text">Do this do that</span>
+            </li>
+        </ul> -->
+
+    <script>
+        //copy a whole element(node)
+      
+        // const li1 = document.createElement('li');
+        // li1.textContent = 'next to do';
+
+        // const li2 = li1.cloneNode(true);
+        // li2.textContent = 'today';
+
+        // const li3 = li1.cloneNode(true);
+        // li3.textContent = 'clone 1';
+
+        // ul.append(li1);
+        // ul.append(li2);
+        // ul.prepend(li3);
+        // ul.remove(li3);  
+        
+        const input = document.getElementById('input').value;
+        
+        const btn = document.getElementById('btn');
+        const sub = function(event) 
+        {
+            console.log(`${input}`);
+        }
+        sub();
+    </script>
+</body>
+</html>

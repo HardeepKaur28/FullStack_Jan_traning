@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let weather = +prompt("enter the number");
+        
+        console.log(weather);
+        console.log(typeof weather);
+
+        if(weather <= 0){
+            console.log("freezy");
+        }
+        else if(weather<=5)
+        {
+            console.log("too cold");
+        }
+        else if(weather<=15)
+        {
+            console.log("cold air");
+        }
+        else if(weather<=25){
+            console.log("normal");
+        }
+        else if(weather<=40)
+        {
+            console.log("moderate");
+        }
+        else {
+            console.log("too hot");
+        }
+    </script>
+</body>
+</html>

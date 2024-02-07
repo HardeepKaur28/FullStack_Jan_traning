@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //asynchroziation and synchronization
+        //js is a Asy. : one time mutiple requests
+        //single thread and muti thread :  
+        //js is single thread : one task at one time.
+        //mutiple thread : one time mutliple request
+
+        //functions :readable,non-repetable
+        console.log("Start");
+
+        // Synchronous operation:   Blocking executatiion
+        const result = add(2, 3);
+        console.log(result);
+
+        console.log("End");
+
+        function add(a, b) {
+        return a + b;
+        }
+
+        //Asynchronous
+        console.log("Start");
+
+        // Asynchronous operation with a callback
+        setTimeout(() => {
+        console.log("Inside timeout");
+        }, 1000);
+
+        console.log("End");
+
+
+    </script>
+</body>
+</html>

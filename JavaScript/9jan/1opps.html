@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //methods : function inside object .
+         const person = {
+            fName : 'Hardeep',
+            age : 19,
+            //about(){}//also do this
+            about : function () { //this is called method
+                // console.log("my name is Hareep and age is 19 : ");
+                // console.log("my name is Hareep and age is 19 : ");//not work because of object inside a function.
+                // console.log(`my name is ${person.fName} and age is ${person.age}`);
+                console.log(`my name is ${this.fName} and age is ${this.age}`);
+                console.log(this,"this");//this is working like a object
+                console.log(person,"person");
+            }
+         }
+                console.log(this,"this");
+                console.log(person);
+                person.about();
+            // console.log(person.about);
+           
+            //dry :dont repeat yourself
+    </script>
+</body>
+</html>

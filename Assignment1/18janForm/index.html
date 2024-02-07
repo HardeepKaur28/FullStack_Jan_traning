@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/submit-form" method="post">
+            <div class="container2">
+            <div class="input-box">
+                <label for="name">First Name</label>
+                <input type="text" id="name" name="name" placeholder="Your first name" required>
+            
+                <label for="name">Last Name</label>
+                <input type="text" id="name" name="name" placeholder="Your last name" required>    
+            </div>    
+            <br/>
+
+            <div class="input-box">
+            <label for="em">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+    
+            <label for="em">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br/>
+            </div>
+
+            <div class="input-box">
+            <label for="phone">Phone</label>
+            <input type="text" placeholder="Area code">
+            <input type="number" placeholder="Phone number">
+            <br/>
+            </div>
+
+            <div class="input-box">
+            <label for="position">Applying for Position</label>
+            <input type="text"><br/>
+            </div>
+
+            <div class="input-box">
+            <label for="">When can you start?</label>
+            <input type="date"><br/>
+            </div>
+
+        
+            <label for="address">Address</label><br/>
+            <input type="text" placeholder="Street address"><br/>
+            <input type="text" placeholder="Street address line 2">
+            <br/>
+    
+
+            
+            <label for="message">Cover Letter</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="input-box">
+            <button>Upload Resume</button>
+            <input type="file" placeholder="Upload file"><br/>
+            </div>
+            <input type="button" value="Apply Now" class="btn1">
+        </div>
+        </form>
+    </div>
+</body>
+</html>

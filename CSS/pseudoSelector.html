@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         button:hover{
+                color:rgb(0, 139, 37);
+                font-weight: bold;
+               
+        }
+        button:active{
+            background-color: bisque;
+        }
+        a:active{
+           color: rgb(83, 12, 36);
+        }
+        a:visited{
+            color: rgb(255, 0, 89);
+        }
+        input:focus{
+            background-color: blueviolet;
+        }
+        h1:nth-child(2n){
+            background-color: cadetblue;
+        }
+        h1:nth-child(odd){
+            background-color: chartreuse;
+        }
+        div>h1:first-child{
+            background-color: bisque;
+        }
+        div h1:last-child{
+            background-color: rgba(128, 128, 128, 0.91);
+        }
+        
+        p::first-letter{
+            color: rgb(151, 165, 42);
+            font-size: 34px;
+            font-weight: bold;
+        }
+        p::first-line{
+            color: blueviolet;
+        }
+        .content{
+            height: 300px;
+            width: 300px;
+            background-color: palegreen;
+        }
+        .container{
+            height: 300px;
+            width: 300px;
+            background-color: palegreen;
+            float: right;
+            margin-left:  34px;
+        }
+        .one{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!-- class :
+    elements :: -->
+    <!-- pseudo selector :  
+            button: hover,action,visted
+        intput tag -> focus
+    -->
+    <button>
+        click me
+    </button><br>
+    <a href="">this is link</a><br>
+    <input type="text">
+        <h1>one</h1>
+        <h1>two</h1>
+        <h1>three</h1>
+        <h1>four</h1>
+        <h1>five</h1>
+    <div>
+        <h1>one</h1>
+        <h1>two</h1>
+        <h1>three<9/h1>
+        <h1>four</h1>
+        <h1>five</h1>
+        <section>
+            <h1>one</h1>
+            <h1>two</h1>
+            <h1>three</h1>
+            <h1>four</h1>
+            <h1>five</h1>
+        </section>
+    </div>
+    <!-- element selector  -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam cum ducimus, consequatur ea voluptas tempora minima nemo quod ab asperiores, ut doloremque quia nesciunt quae rerum vitae non! Culpa voluptatem veniam iusto maxime!</p>
+    <!-- float properities -->
+    <div class="one"><div class="content"></div>
+    <div class="container"></div></div>
+</body>
+</html>

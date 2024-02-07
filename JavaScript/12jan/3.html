@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append Child</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="divID">
+        <p>this is div ehich we created new element<p>
+    </div>
+    <script>
+        // let newPara = document.createElement('p');
+        // newPara.textContent = 'new p tag is created by JavaScript';
+        // document.body.appendChild(newPara);//inside body a paragraph is created.
+
+        let parentDiv= document.getElementById('divID');
+        let childDiv = document.createElement('h1');
+        childDiv.textContent = 'Heading two';
+        // parentDiv.appendChild(childDiv);
+        parentDiv.prepend(childDiv);
+    </script>
+</body>
+</html>

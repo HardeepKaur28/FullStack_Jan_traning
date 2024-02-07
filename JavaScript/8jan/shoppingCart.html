@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+</head>
+<body>
+
+<script>
+  async function createOrder(items) {
+    try {
+      console.log("Creating order with items:", items);
+      // Simulate creating an order by making a request to a server (not implemented in this example)
+      const createdOrder = await simulateServerRequest(items);
+      return createdOrder;
+    } catch (error) {
+      console.error("Error creating order:", error);
+      throw error;
+    }
+  }
+
+  async function simulateServerRequest(items) {
+    // Simulate making a server request to create an order
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const createdOrder = {
+          orderId: Math.floor(Math.random() * 1000), // Simulate a unique order ID
+          items: items,
+          totalPrice: calculateTotalPrice(items),
+        };
+        resolve(createdOrder);
+      }, 1000); // Simulating delay with setTimeout
+    });
+  }
+
+  function calculateTotalPrice(items) {
+    // Simulate calculating the total price based on the items
+    const itemPrices = {
+      top: 20,
+      pants: 30,
+      pen: 2,
+      ball: 5,
+      laptop: 500,
+      mobile: 300,
+    };
+
+    return items.reduce((total, item) => total + (itemPrices[item] || 0), 0);
+  }
+
+  async function createCart(order) {
+    try {
+      const createdOrder = await createOrder(order);
+      const cartScreen = await showCartScreen(createdOrder);
+      const checkoutResult = await checkoutPage(cartScreen);
+      const paymentAmount = await paymentPage(checkoutResult);
+      await alertUser("Order Placed");
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  function showCartScreen(order) {
+    return new Promise((resolve, reject) => {
+      console.log("Displaying cart screen for order:", order);
+      // Simulating asynchronous operation
+      setTimeout(() => {
+        const cartScreen = { order: order, status: "Cart Screen displayed" };
+        resolve(cartScreen);
+      }, 1000); // Simulating delay with setTimeout
+    });
+  }
+
+  function checkoutPage(cartScreen) {
+    return new Promise((resolve, reject) => {
+      console.log("Navigating to checkout page with cart screen:", cartScreen);
+      // Simulating asynchronous operation
+      setTimeout(() => {
+        const checkoutResult = { cartScreen: cartScreen, status: "Checkout Page displayed" };
+        resolve(checkoutResult);
+      }, 1000); // Simulating delay with setTimeout
+    });
+  }
+
+  function paymentPage(checkoutResult) {
+    return new Promise((resolve, reject) => {
+      console.log("Navigating to payment page with checkout result:", checkoutResult);
+      // Simulating asynchronous operation
+      setTimeout(() => {
+        const paymentAmount = checkoutResult.cartScreen.order.totalPrice;
+        resolve(paymentAmount);
+      }, 1000); // Simulating delay with setTimeout
+    });
+  }
+
+  function alertUser(message) {
+    return new Promise((resolve, reject) => {
+      console.log("Alerting user:", message);
+      // Simulating asynchronous operation
+      setTimeout(() => {
+        alert(message);
+        resolve();
+      }, 1000); // Simulating delay with setTimeout
+    });
+  }
+
+  // Example usage:
+  createCart(["top", "pants", "pen", "ball", "laptop", "mobile"]);
+</script>
+
+</body>
+</html>

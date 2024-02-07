@@ -1,0 +1,22 @@
+<%- include ('nav') %>
+<body>
+    <h2>
+        <% if(st)
+        {
+            %>
+            Welcome &emsp; &emsp; &emsp;
+            <%=uname%>
+            &emsp; &emsp; &emsp;
+            <a href="lout">Logout</a>
+            <%
+        }
+        else
+        {
+            %>
+            <a href="/login">Login</a>
+            <%
+        }
+        %>
+        
+    </h2>
+</body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    oijijij
+    <script>
+        //print the no. whose digit sum is not prime using arr:
+        //if 22 is the no. of index 1 then first count its digit sum(2+2) = if not prime then print : 
+
+        const arr = [11,22,33,14,55,21,99,61,111];
+        for(let i=0;i<arr.length;i++){
+                num=arr[i]
+                let sum= 0;
+                while(num>0){
+                let r = num%10;
+                    sum = sum+r;
+                    num = Math.floor(num/10);
+                } 
+                // console.log(sum);
+                let c=0;
+                for(let p =0;p<=sum;p++){
+                    if(sum%p==0){
+                        c++;
+                    }
+                }
+                if(c!=2){
+                    console.log('Number : ',arr[i]," Digit sum is : ",sum);
+                }
+        }
+        
+    </script>
+</body>
+</html>
+<!-- //temporal deadzone -->
+<!-- //HRM : human resource management 
+    //LRM : 
+ -->
